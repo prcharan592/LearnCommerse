@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aaryan's Veggies</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <!-- Navbar starts -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Aaryans Commerce</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!-- <div class="col-sm-9"> -->
+<!-- <div class="col-sm-3 veg1">
+    <img id="vege" class="img-fluid" src="apple.webp" alt="">
+    <p id="desc">Shimla Apples</p>
+    <p id="price">₹150/Kg</p>
+    <button class="btn btn-primary add-to-cart-btn" data-product="Shimla Apples" data-price="150">Add to Cart</button>
+    <button class="decrement">-</button>
+        <span class="quantity">0</span>
+        <button class="increment">+</button>
+</div>
+
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="apple1.webp" alt="">
+    <p id="desc">Gala Apples</p>
+    <p id="price">₹250/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="babypot.webp" alt="">
+    <p id="desc">Baby Potatoes</p>
+    <p id="price">₹50/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="cabbage.webp" alt="">
+    <p id="desc">Fresh Cabbage</p>
+    <p id="price">₹30/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="cauliflower.webp" alt="">
+    <p id="desc">Clean Cauliflower</p>
+    <p id="price">₹45/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="coconut.webp" alt="">
+    <p id="desc">Coconuts</p>
+    <p id="price">₹35/Pc</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="coriander.webp" alt="">
+    <p id="desc">Spinach</p>
+    <p id="price">₹15/Pc</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="ginger.webp" alt="">
+    <p id="desc">Clean Ginger</p>
+    <p id="price">₹400/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="tomato.webp" alt="">
+    <p id="desc">Juicy Tomatoes</p>
+    <p id="price">₹40/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="greentomato.webp" alt="">
+    <p id="desc">Raw Tomato</p>
+    <p id="price">₹59/Kg</p>
+</div>
+
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="knol.webp" alt="">
+    <p id="desc">Knol Khol</p>
+    <p id="price">₹75/Kg</p>
+</div>
+
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="samboni.webp" alt="">
+    <p id="desc">Small Onion</p>
+    <p id="price">₹80/Kg</p>
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="potato.webp" alt="">
+    <p id="desc">Raw Potato</p>
+    <p id="price">₹40/Kg</p>
+</div>
+
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="onion.webp" alt="">
+    <p id="desc">Fresh Onion</p>
+    <p id="price">₹35/Kg</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="ladyf.webp" alt="">
+    <p id="desc">Lady Finger</p>
+    <p id="price">₹65/Kg</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="pineapple.webp" alt="">
+    <p id="desc">Sweet pineapple</p>
+    <p id="price">₹50/Pc</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="pme.webp" alt="">
+    <p id="desc">Pomegranate</p>
+    <p id="price">₹290/Kg</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="dragon.webp" alt="">
+    <p id="desc">Dragon Fruit</p>
+    <p id="price">₹100/Pc</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="custard.webp" alt="">
+    <p id="desc">Custard Apple</p>
+    <p id="price">₹150/Kg</p>
+
+</div>
+<div class="col-sm-3">
+    <img id="vege" class="img-fluid" src="sapota.webp" alt="">
+    <p id="desc">Sapota</p>
+    <p id="price">₹165/Kg</p>
+
+</div> -->
+
+<div id="temp" ></div>
+<!-- 
+</div>
+<div class="col-sm-3" id="cart">
+    <h1>Cart Details</h1>
+    <ul id="cart-items">
+       
+    </ul>
+    <p id="cart-total">Total: ₹0</p>
+    <button class="btn btn-success" id="checkout-btn">Checkout</button>
+</div> -->
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="productList">
+        <!-- Product list will be displayed here -->
+    </div>
+
+    <div id="productDetails">
+        <!-- Product details will be displayed here -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: 'GET',
+                dataType: "json",
+                url: 'https://dummyjson.com/products',
+                success: function (data, status, xhr) {
+                    var products = data.products;
+
+                    // Function to display the product list
+                    function displayProductList(products) {
+                        var HTML = "";
+                        for (let i = 0; i < products.length; i++) {
+                            var productId = i + 1;
+
+                            HTML += `
+                                <div class="col-sm-3">
+                                    <p>${products[i].brand}</p>
+                                    <p>${products[i].title}</p>
+                                    <img src="${products[i].images[0]}" class="img-responsive prod" data-id="${productId}" data-description="${products[i].description}" data-price="${products[i].price}" data-image="${products[i].images[0]}" style="height:200px; cursor: pointer;"><br>
+                                </div>`;
+                        }
+                        $("#productList").html(HTML);
+                    }
+
+                    // Function to display product details below the product list
+                    function displayProductDetails(productId, description, price, imageUrl) {
+                        var HTML = `
+                            <img src="${imageUrl}" style="height:200px;">
+                            <p>Description: ${description}</p>
+                            <p>Price: $${price}</p>
+                        `;
+                        $("#productDetails").html(HTML);
+                    }
+
+                    // Display the list of products
+                    displayProductList(products);
+
+                    // Event handler for product clicks
+                    $(document).on('click', '.prod', function() {
+                        var productId = $(this).data('id');
+                        var description = $(this).data('description');
+                        var price = $(this).data('price');
+                        var imageUrl = $(this).data('image');
+
+                        // Display product details below the product list
+                        displayProductDetails(productId, description, price, imageUrl);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
