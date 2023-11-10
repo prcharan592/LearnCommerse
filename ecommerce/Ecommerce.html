@@ -83,6 +83,15 @@
       displayCartModal();
     }
 
+    // Function to delete a product from the cart
+    function deleteCartItem(index) {
+      cartItems.splice(index, 1);
+      updateCartDisplay();
+      updateCartBadge();
+      updateTotalPrice();
+      saveCartToLocalStorage();
+    }
+
     // Function to update the cart badge
     function updateCartBadge() {
       var cartBadge = $("#cart-badge");
@@ -94,12 +103,22 @@
     function updateCartDisplay() {
       var cartHtml = "<h3>Shopping Cart</h3><ul>";
       for (var i = 0; i < cartItems.length; i++) {
-        cartHtml += "<li>" + cartItems[i].title + " - $" + cartItems[i].price + "</li>";
+        cartHtml += `
+          <li>
+            ${cartItems[i].title} - $${cartItems[i].price}
+            <button class="btn btn-danger btn-xs delete-item" data-id="${i}">Delete</button>
+          </li>`;
       }
       cartHtml += "</ul>";
 
       // Display the cart content in a modal or any other suitable way
       $("#cartModalBody").html(cartHtml);
+
+      // Attach a click event to the delete buttons
+      $(".delete-item").click(function () {
+        var index = $(this).data('id');
+        deleteCartItem(index);
+      });
     }
 
     // Function to display the cart modal
