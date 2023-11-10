@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Details</title>
+  <style>
+    /* Add some basic CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .names-column, .details-column {
+      width: 48%;
+    }
+    .names-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .employee-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Employee Details</h1>
+  <div class="container">
+    <div class="names-column">
+      <ul class="names-list" id="names-list"></ul>
+    </div>
+    <div class="details-column">
+      <div id="employee-details"></div>
+    </div>
+  </div>
+
+  <script>
+    // Define the API endpoint URL
+    const apiUrl = "https://dummy.restapiexample.com/api/v1/employees";
+
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Configure the GET request
+    xhr.open("GET", apiUrl, true);
+
+    // Set up a function to handle the response
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const response = JSON.parse(xhr.responseText);
+        const namesList = document.getElementById("names-list");
+        const detailsColumn = document.getElementById("employee-details");
+
+        // Loop through the employees and display their names
+        response.data.forEach((employee) => {
+          const employeeCard = document.createElement("li");
+          employeeCard.classList.add("employee-card");
+          employeeCard.textContent = employee.employee_name;
+          employeeCard.addEventListener("click", () => showDetails(employee));
+          namesList.appendChild(employeeCard);
+        });
+
+        function showDetails(employee) {
+          detailsColumn.innerHTML = `
+            <strong>Name:</strong> ${employee.employee_name}<br>
+            <strong>Salary:</strong> ${employee.employee_salary}<br>
+            <strong>Age:</strong> ${employee.employee_age}<br>
+          `;
+        }
+      } else {
+        console.error("Failed to retrieve data. Status code: " + xhr.status);
+      }
+    };
+
+    // Send the GET request
+    xhr.send();
+  </script>
+</body>
+</html>
